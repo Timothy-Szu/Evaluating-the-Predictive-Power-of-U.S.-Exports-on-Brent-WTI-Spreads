@@ -38,7 +38,7 @@ Over time, significant investments in storage, pipeline, and export infrastructu
 
 Weekly estimates for U.S. Crude Inventory (Cushing and PADD3, excluding the Strategic Petroleum Reserve) and Crude Export volumes were sourced via the EIA API v2. This ensures the model incorporates the latest available fundamental data through May 2026.
 
----
+
 
 ## <ins><span style="color:#4472C4;">Price Standardization</span></ins>
 
@@ -73,9 +73,7 @@ Physical preparation, scheduling, and logistical arrangements required to export
 
 The analysis first measures the contemporaneous correlation between inventory levels and the Brent–WTI spread using a 0-week lag before progressively extending the lag horizon to evaluate how the relationship evolves over time.
 
-As shown in Figure 2, the resulting correlation profiles exhibit an inverted U-shaped pattern, with Gulf Coast inventories (PADD 3) displaying materially stronger correlations with the Brent–WTI spread than inventories at Cushing. This result is economically intuitive, as the Gulf Coast serves as the primary export corridor for U.S. crude oil exports.
-
-The negative correlation is consistent with the hypothesis that rising Gulf Coast inventories increase export availability, contributing to a narrowing of the Brent–WTI spread.
+As shown in Figure 2, the resulting correlation profiles exhibit an inverted U-shaped pattern, with Gulf Coast inventories (PADD 3) displaying materially stronger correlations with the Brent–WTI spread than inventories at Cushing. This result is economically intuitive, as the Gulf Coast serves as the primary export corridor for U.S. crude oil exports. The negative correlation is consistent with the hypothesis that rising Gulf Coast inventories increase export availability, contributing to a narrowing of the Brent–WTI spread.
 
 At a 0-week lag, the correlation between Gulf Coast inventories and the spread is approximately r = -0.400. The magnitude of the relationship strengthens as the lag horizon increases, reaching a peak correlation of approximately r = -0.535 at a 13-week lag. This pattern suggests that inventory imbalances may influence export flows and spread dynamics with a substantial transmission delay.
 
@@ -85,9 +83,7 @@ Accordingly, subsequent analysis focuses on the 11–14 week lag window in order
 
 ## <ins><span style="color:#2F5597;">Export Capacity</span></ins>
 
-As the EIA dataset does not provide a direct measure of U.S. crude export capacity, a proxy variable is constructed to estimate effective system capacity. Specifically, export capacity is approximated using a 52-week rolling maximum of observed export volumes.
-
-By using the highest recorded export volume over the previous 52 weeks, the model generates a dynamic estimate of the system’s demonstrated operational export capacity. This approach allows the analysis to account for the substantial expansion in U.S. export infrastructure between 2017 and 2026, including pipeline, storage, and terminal developments along the Gulf Coast.
+As the EIA dataset does not provide a direct measure of U.S. crude export capacity, a proxy variable is constructed to estimate effective system capacity. Specifically, export capacity is approximated using a 52-week rolling maximum of observed export volumes. By using the highest recorded export volume over the previous 52 weeks, the model generates a dynamic estimate of the system’s demonstrated operational export capacity. This approach allows the analysis to account for the substantial expansion in U.S. export infrastructure between 2017 and 2026, including pipeline, storage, and terminal developments along the Gulf Coast.
 
 Export utilization for each week is then calculated as:
 
@@ -149,12 +145,12 @@ The issue is further compounded by the requirement of three consecutive weeks of
 
 
 2. Export capacity is proxied using a 52-week rolling maximum of observed export volumes. While this provides a dynamic estimate of effective system capacity, the approach may introduce measurement bias, particularly during periods when new peak export levels are reached near the end of the rolling window. As a result, the proxy may lag changes in underlying infrastructure capacity and may partially reflect contemporaneous market conditions, creating a degree of endogeneity in the measure.
-3. 
+   
 
-4. Our analysis examines the relationship between inventory levels and the Brent–WTI spread across different export regimes. While the results indicate a statistically significant correlation, they do not establish causality or definitively confirm the proposed mechanism whereby export dynamics drive spread narrowing. Reverse causality may also be plausible, in which a narrower Brent–WTI spread incentivizes higher export activity. Nevertheless, the primary objective of the study is to evaluate the predictive usefulness of export-related variables, for which correlation may still provide economically meaningful signals.
+3. Our analysis examines the relationship between inventory levels and the Brent–WTI spread across different export regimes. While the results indicate a statistically significant correlation, they do not establish causality or definitively confirm the proposed mechanism whereby export dynamics drive spread narrowing. Reverse causality may also be plausible, in which a narrower Brent–WTI spread incentivizes higher export activity. Nevertheless, the primary objective of the study is to evaluate the predictive usefulness of export-related variables, for which correlation may still provide economically meaningful signals.
 
 
-5. The analysis does not explicitly incorporate freight costs or transatlantic arbitrage dynamics, both of which have become increasingly important drivers of the Brent–WTI spread in the post-2022 market structure. In particular, changes in shipping costs, refinery margins, and crude quality differentials may influence the spread independently of U.S. inventory conditions and export flows.
+4. The analysis does not explicitly incorporate freight costs or transatlantic arbitrage dynamics, both of which have become increasingly important drivers of the Brent–WTI spread in the post-2022 market structure. In particular, changes in shipping costs, refinery margins, and crude quality differentials may influence the spread independently of U.S. inventory conditions and export flows.
 
 ---
 
