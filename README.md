@@ -16,6 +16,8 @@ Historically, the relationship between U.S. domestic crude inventories and the B
 
 However, the removal of the U.S. crude export ban in December 2015 effectively ended major restrictions imposed under the Energy Policy and Conservation Act of 1975, structurally transforming the U.S. energy market.
 
+<img width="1031" height="498" alt="image" src="https://github.com/user-attachments/assets/4e376b6e-2071-4556-b24e-0775cc3a51c4" />
+
 As shown in Figure 1, the sharp increase in U.S. crude exports subsequently transformed the country from a relatively closed domestic system into a major global swing producer.
 
 This project investigates whether the interaction between U.S. crude inventories and export flows can serve as a reliable explanatory indicator for the Brent–WTI spread, and whether these relationships can generate high conviction spread trading opportunities.
@@ -73,6 +75,8 @@ Physical preparation, scheduling, and logistical arrangements required to export
 
 The analysis first measures the contemporaneous correlation between inventory levels and the Brent–WTI spread using a 0-week lag before progressively extending the lag horizon to evaluate how the relationship evolves over time.
 
+<img width="975" height="487" alt="image" src="https://github.com/user-attachments/assets/f0fb5b32-99b7-45d5-8cf1-cec323607628" />
+
 As shown in Figure 2, the resulting correlation profiles exhibit an inverted U-shaped pattern, with Gulf Coast inventories (PADD 3) displaying materially stronger correlations with the Brent–WTI spread than inventories at Cushing. This result is economically intuitive, as the Gulf Coast serves as the primary export corridor for U.S. crude oil exports. The negative correlation is consistent with the hypothesis that rising Gulf Coast inventories increase export availability, contributing to a narrowing of the Brent–WTI spread.
 
 At a 0-week lag, the correlation between Gulf Coast inventories and the spread is approximately r = -0.400. The magnitude of the relationship strengthens as the lag horizon increases, reaching a peak correlation of approximately r = -0.535 at a 13-week lag. This pattern suggests that inventory imbalances may influence export flows and spread dynamics with a substantial transmission delay.
@@ -87,7 +91,15 @@ As the EIA dataset does not provide a direct measure of U.S. crude export capaci
 
 Export utilization for each week is then calculated as:
 
+```md
+$$
+Utilization Ratio = \frac{Current Weekly Export}{52-Week Rolling Max Export}
+$$
+```
+
 We then use varying levels of export utilization and lag to further our analysis of the relationship between Gulf inventories and the Brent–WTI spread. Our findings are presented below.
+
+<img width="1118" height="431" alt="image" src="https://github.com/user-attachments/assets/34323791-7618-4276-a056-380424946b2b" />
 
 Figure 3 presents a two-dimensional heatmap showing the sensitivity analysis of the correlation between inventory levels and the Brent–WTI spread across different export utilization rates and lag durations.
 
@@ -102,9 +114,9 @@ This result is consistent with the hypothesis that inventory levels become more 
 As crude inventories exhibit strong cyclical and seasonal behavior, the analysis employs a dynamic inventory z-score framework.
 
 The inventory z-score is calculated using a 52-week rolling window, where:
-
+```text
 Z = (X - μ) / σ
-
+```
 with the rolling mean μ and rolling standard deviation σ computed over the previous 52 weeks. This approach standardizes inventory levels relative to their recent historical range while adapting to changing market conditions over time. High inventory conditions are defined as periods where the inventory z-score exceeds 1, while low inventory conditions are defined as periods where the z-score falls below -1. The strategy is back-tested beginning from January 2016, corresponding to the start of the post-export-ban regime.
 
 
@@ -124,6 +136,7 @@ with the rolling mean μ and rolling standard deviation σ computed over the pre
 
 4. The framework is tested across multiple export utilization thresholds, including 70%, 80%, 90%, and 95%.
 
+<img width="1110" height="554" alt="image" src="https://github.com/user-attachments/assets/c09b9235-39db-4598-b6b4-8589828c0203" />
 
 
 ## <ins><span style="color:#2F5597;">Back-Test Results</span></ins>
