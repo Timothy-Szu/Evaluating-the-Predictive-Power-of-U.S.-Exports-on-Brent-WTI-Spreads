@@ -91,11 +91,11 @@ As the EIA dataset does not provide a direct measure of U.S. crude export capaci
 
 Export utilization for each week is then calculated as:
 
-```md
+
 $$
-Utilization Ratio = \frac{Current Weekly Export}{52-Week Rolling Max Export}
+\text{Utilization Ratio} = \frac{\text{Current Weekly Export}}{\text{52-Week Rolling Max Export}}
 $$
-```
+
 
 We then use varying levels of export utilization and lag to further our analysis of the relationship between Gulf inventories and the Brent–WTI spread. Our findings are presented below.
 
