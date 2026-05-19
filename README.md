@@ -1,5 +1,5 @@
 # <ins><span style="color:#1F4E79;">Evaluating the Predictive Power of U.S. Exports on Brent–WTI Spreads</span></ins>
-Timothy Szu/ 19 May 2026
+Timothy Szu / 19 May 2026 |
 [LinkedIn](https://www.linkedin.com/in/timothy-szu)
 
 ---
