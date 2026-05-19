@@ -1,5 +1,6 @@
 # <ins><span style="color:#1F4E79;">Evaluating the Predictive Power of U.S. Exports on Brent–WTI Spreads</span></ins>
-
+Timothy Szu / 19 May 2026
+[LinkedIn](www.linkedin.com/in/timothy-szu)
 ---
 
 # <ins><span style="color:#2F5597;">Executive Summary</span></ins>
@@ -135,6 +136,8 @@ with the rolling mean μ and rolling standard deviation σ computed over the pre
 3. No positions are initiated when export utilization remains below the selected threshold.
 
 4. The framework is tested across multiple export utilization thresholds, including 70%, 80%, 90%, and 95%.
+
+5. A four week holding period is utilized, over which the difference in spread is added to the cumulative PnL.
 
 <img width="1110" height="554" alt="image" src="https://github.com/user-attachments/assets/c09b9235-39db-4598-b6b4-8589828c0203" />
 
